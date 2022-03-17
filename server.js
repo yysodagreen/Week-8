@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+const express = require('express')
 var app = require('./server/config/app');
 var debug = require('debug')('week-4:server');
 var http = require('http');
@@ -14,7 +14,7 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3500');
 app.set('port', port);
-
+app.use("/public", express.static("public")); 
 /**
  * Create HTTP server.
  */
