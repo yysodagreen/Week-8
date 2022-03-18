@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { BookRepository} from './book.repository';
 import { StaticDataSource } from './static.datasource';
@@ -11,3 +12,18 @@ import { HttpClientModule } from '@angular/common/http';
   {provide: StaticDataSource, useClass: RestDataSource}]
 })
 export class ModelModule {}
+=======
+import { NgModule } from '@angular/core';
+import { BookRepository} from './book.repository';
+import { StaticDataSource } from './static.datasource';
+import { Cart } from './cart.model';
+import { RestDataSource } from './rest.datasource';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [HttpClientModule],
+  providers: [BookRepository, StaticDataSource, Cart,
+  {provide: StaticDataSource, useClass: RestDataSource}]
+})
+export class ModelModule {}
+>>>>>>> ce1d2bf032d726585d7be6cf965ba2db66a2cd6a
